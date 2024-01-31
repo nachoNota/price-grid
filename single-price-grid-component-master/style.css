@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+:root{
+    --Cyan: hsl(179, 61%, 44%);
+    --LighterCyan: hsl(179, 47%, 55%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    --ff-k: 'Karla', sans-serif;
+}
+
+body{
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-family: var(--ff-k);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--LightGray);
+    color: var(--LightGray);
+}
+
+.wrappler{
+    max-width: 41rem;
+    display: grid;
+    box-shadow: .5rem 1rem 3rem hsl(0, 0%, 0%, .2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+@media (min-width: 600px) {
+    body{
+        padding: 0rem;
+   }   
+
+    .wrappler{
+        grid-template-rows: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        max-height: 31rem;
+
+    }
+
+    .join{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+}
+
+.join, .subscription, .us{
+    padding: 2.5rem;
+}
+
+.join{
+    background: white;
+}
+
+.join h1{
+    color: var(--Cyan);
+    font-size: 1.7rem;
+}
+
+.join p:nth-child(2){
+    color: var(--BrightYellow);
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 1.2rem;
+}
+
+.join p:nth-child(3){
+    color: var(--GrayishBlue);
+    margin-top: 0.8rem;
+    max-width: 36rem;
+    line-height: 1.7rem;
+}
+
+.subscription{
+    background: var(--Cyan);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.subscription h2, .us h2{
+    font-size: 1.15rem;
+}
+
+.subscription .price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subscription .price p{
+    opacity: 0.5;
+}
+
+.subscription .access{
+    margin-block: 0.5rem;
+}
+
+.subscription span{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.subscription .button{
+    padding-block: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: .5rem 1rem 3rem hsl(0, 0%, 0%, .2);
+    background: var(--BrightYellow);
+    color: var(--LightGray);
+    font-weight: 700;
+}
+
+.us{
+    background: var(--LighterCyan);
+}
+
+.us ul{
+    list-style: none;
+    margin-top: 1.1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.us ul li:not(:last-child){
+    margin-bottom: 0.2rem;
+}
